@@ -3,6 +3,7 @@ package com.lms.service;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,5 +27,11 @@ public class LmsService {
 	
 	public void delete(Long id) {
 		lmsRepository.deleteById(id);
+	}
+	
+	public Optional<Book> findOne(long id) {
+		
+		return lmsRepository.findById(id);
+		
 	}
 }

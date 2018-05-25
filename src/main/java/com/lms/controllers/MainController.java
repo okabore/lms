@@ -44,8 +44,7 @@ public class MainController {
 		if(lmsService.findOne(id) != null) {
 			Optional<Book> b = lmsService.findOne(id);
 		}
-		
-		books.add(lmsService.findOne(id));
+		books.add(b);
 		req.setAttribute("books", books);
 		return "index";
 	}

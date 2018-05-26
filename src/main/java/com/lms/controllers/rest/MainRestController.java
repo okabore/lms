@@ -27,4 +27,6 @@ public class MainRestController {
 	public void deleteBook(@RequestParam Long id) {
 		lmsService.delete(id);
 	}
+
+	//Modification du MainController aussi pour voir les choses
 }

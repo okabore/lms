@@ -42,10 +42,21 @@ public class MainController {
 		List<Book> books = new ArrayList<>();
 		Book b = new Book();
 		if(lmsService.findOne(id) != null) {
-			Optional<Book> b = lmsService.findOne(id);
+			//Optional<Book> b = lmsService.findOne(id);
 		}
 		books.add(b);
 		req.setAttribute("books", books);
 		return "index";
 	}
+
+	//Test du comportement des fichiers avec github
+
+    /*
+    Check what's rigth
+     */
+    @GetMapping("/")
+    public void findAll(){
+	    //Only for github test
+    }
+
 }
